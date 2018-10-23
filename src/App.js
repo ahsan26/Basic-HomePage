@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import Nav from "./Components/nav";
+import Banner from "./Components/banner";
+import Collections from "./Components/collections";
+import "./utils";
+import { Row, Col } from "react-bootstrap";
+import { Container } from "reactstrap";
+import ExtraInfo from "./Components/ExtraInfo";
+import NewsLetter from "./Components/NewsLetter";
 class App extends Component {
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Nav />
+        <Banner />
+        <Collections />
+
+        <Container>
+          <Row style={{marginTop:80}}>
+            <Col md={4} className="mainContent"><img src="http://rhythm.bestlooker.pro/images/fashion/image-4.jpg" alt=""/></Col>
+            <Col md={4} className="mainContent"><img src="http://rhythm.bestlooker.pro/images/fashion/image-5.jpg" alt=""/></Col>
+            <Col md={4} className="mainContent"><img src="http://rhythm.bestlooker.pro/images/fashion/image-6.jpg" alt=""/></Col>
+          </Row>
+          <ExtraInfo />
+        </Container>
+<NewsLetter />
       </div>
     );
   }

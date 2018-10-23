@@ -1,32 +1,73 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.swiper-container {
+    width: 100%;
+    height: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: 600px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    filter: brightness(50%);
+    position: relative;
+    color: #fff;
+}
+.swiper-slide p{
+    font-size: 20px;    
+}
+  .swiper-slide{
+    background-size:cover;
+    background-position: center;
   }
+  .swiper-slide:nth-child(1){
+      background-image: url('http://rhythm.bestlooker.pro/images/fashion/section-bg-2.jpg');
+  }
+  .swiper-slide:nth-child(2){
+    background-image: url('http://rhythm.bestlooker.pro/images/fashion/section-bg-3.jpg');
+}
+.swiper-slide:nth-child(3){
+  background-image: url('http://rhythm.bestlooker.pro/images/fashion/section-bg-1.jpg');
+}
+.navbar-nav a, .navbar-header a{
+    color: #fff !important;
+}
+.navbar-header a{
+    font-weight: bold;
+}
+.collection:hover{
+    opacity: .8;
+    cursor: pointer;
+    transition: all .40s ease;
+}
+.navBar{
+    transition: all .40s ease;
+}
+.come-in {
+    transform: translateY(150px);
+    animation: come-in 0.8s ease forwards;
+  }
+  .come-in:nth-child(odd) {
+    animation-duration: 0.8s; /* So they look staggered */
+  }
+  
+  @keyframes come-in {
+    to { transform: translateY(0); }
+  }
+  .mainContent img{
+    width: 100%;
+  }
+#collapseExample1,#collapseExample2,#collapseExample3{
+    height: 100px;
 }
